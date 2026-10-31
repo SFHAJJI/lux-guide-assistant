@@ -71,7 +71,25 @@ Sans modèle (96 questions, index `6f23b48371bb`, 2026-10-31) : 95 % conformes, 
 <!-- eval:end -->
 
 <!-- eval-model:start -->
-_Le tableau avec modèle est inséré par `node eval/run.mjs --model`._
+Avec le modèle (96 questions, index `6f23b48371bb`, 2026-10-31) : 97 % conformes, 0.41 appel modèle par question, médiane 2 ms.
+
+| tranche | n | conforme | fiche | verdict | span | appels modèle / q | médiane ms |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| on-page | 4 | 100 % | 100 % | 100 % | – | 0.50 | 9 |
+| elsewhere | 4 | 100 % | 100 % | 100 % | – | 1.25 | 6521 |
+| typo | 3 | 100 % | 100 % | – | – | 0.67 | 14 |
+| en | 4 | 75 % | 75 % | – | – | 1.50 | 7296 |
+| de | 2 | 100 % | 100 % | – | – | 2.00 | 9817 |
+| pt | 2 | 100 % | 100 % | – | – | 2.00 | 9939 |
+| list | 4 | 75 % | 75 % | – | – | 2.00 | 9489 |
+| amount | 3 | 100 % | 100 % | – | – | 0.00 | 2 |
+| delay | 2 | 100 % | 100 % | – | – | 1.00 | 4869 |
+| yes_no | 3 | 100 % | 100 % | – | – | 0.33 | 6 |
+| vague | 2 | 100 % | – | 100 % | – | 0.00 | 0 |
+| compound | 1 | 100 % | 100 % | – | – | 3.00 | 8156 |
+| out-of-scope | 5 | 80 % | – | 80 % | – | 0.40 | 2 |
+| smalltalk | 2 | 100 % | – | – | – | 0.00 | 0 |
+| faq | 55 | 100 % | 100 % | – | 100 % | 0.00 | 2 |
 <!-- eval-model:end -->
 
 Ce qui a échoué et ce qui a changé, en cours de route, est consigné dans le rapport et dans l'historique du dépôt.
