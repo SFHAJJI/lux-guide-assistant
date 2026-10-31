@@ -49,21 +49,21 @@ fiche lue, ailleurs, fautes de frappe, anglais, allemand, portugais, liste, mont
 hors du guide.
 
 <!-- eval:start -->
-Sans modèle (96 questions, index `6f23b48371bb`, 2026-10-31) : 95 % conformes, 0.00 appel modèle par question, médiane 2 ms.
+Sans modèle (96 questions, index `6f23b48371bb`, 2026-10-31) : 96 % conformes, 0.00 appel modèle par question, médiane 2 ms.
 
 | tranche | n | conforme | fiche | verdict | span | appels modèle / q | médiane ms |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | on-page | 4 | 100 % | 100 % | 100 % | – | 0.00 | 3 |
 | elsewhere | 4 | 75 % | 75 % | 100 % | – | 0.00 | 3 |
-| typo | 3 | 100 % | 100 % | – | – | 0.00 | 2 |
-| en | 4 | 75 % | 75 % | – | – | 0.00 | 2 |
-| de | 2 | 50 % | 50 % | – | – | 0.00 | 1 |
+| typo | 3 | 100 % | 100 % | – | – | 0.00 | 3 |
+| en | 4 | 100 % | 100 % | – | – | 0.00 | 2 |
+| de | 2 | 50 % | 50 % | – | – | 0.00 | 2 |
 | pt | 2 | 100 % | 100 % | – | – | 0.00 | 2 |
 | list | 4 | 75 % | 75 % | – | – | 0.00 | 2 |
 | amount | 3 | 100 % | 100 % | – | – | 0.00 | 1 |
-| delay | 2 | 100 % | 100 % | – | – | 0.00 | 2 |
+| delay | 2 | 100 % | 100 % | – | – | 0.00 | 1 |
 | yes_no | 3 | 100 % | 100 % | – | – | 0.00 | 2 |
-| vague | 2 | 100 % | – | 100 % | – | 0.00 | 1 |
+| vague | 2 | 100 % | – | 100 % | – | 0.00 | 0 |
 | compound | 1 | 100 % | 100 % | – | – | 0.00 | 4 |
 | out-of-scope | 5 | 80 % | – | 80 % | – | 0.00 | 1 |
 | smalltalk | 2 | 100 % | – | – | – | 0.00 | 0 |
@@ -71,24 +71,24 @@ Sans modèle (96 questions, index `6f23b48371bb`, 2026-10-31) : 95 % conformes, 
 <!-- eval:end -->
 
 <!-- eval-model:start -->
-Avec le modèle (96 questions, index `6f23b48371bb`, 2026-10-31) : 97 % conformes, 0.42 appel modèle par question, médiane 2 ms.
+Avec le modèle (96 questions, index `6f23b48371bb`, 2026-10-31) : 98 % conformes, 0.42 appel modèle par question, médiane 2 ms.
 
 | tranche | n | conforme | fiche | verdict | span | appels modèle / q | médiane ms |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| on-page | 4 | 100 % | 100 % | 100 % | – | 0.50 | 7 |
-| elsewhere | 4 | 100 % | 100 % | 100 % | – | 1.25 | 6586 |
-| typo | 3 | 100 % | 100 % | – | – | 1.00 | 10 |
-| en | 4 | 75 % | 75 % | – | – | 1.50 | 7196 |
-| de | 2 | 100 % | 100 % | – | – | 2.00 | 12774 |
-| pt | 2 | 100 % | 100 % | – | – | 2.00 | 11988 |
-| list | 4 | 75 % | 75 % | – | – | 2.00 | 6792 |
-| amount | 3 | 100 % | 100 % | – | – | 0.00 | 2 |
-| delay | 2 | 100 % | 100 % | – | – | 1.00 | 5569 |
-| yes_no | 3 | 100 % | 100 % | – | – | 0.33 | 6 |
+| on-page | 4 | 100 % | 100 % | 100 % | – | 0.50 | 8 |
+| elsewhere | 4 | 100 % | 100 % | 100 % | – | 1.25 | 5836 |
+| typo | 3 | 100 % | 100 % | – | – | 0.67 | 4 |
+| en | 4 | 100 % | 100 % | – | – | 2.00 | 6686 |
+| de | 2 | 100 % | 100 % | – | – | 2.00 | 9963 |
+| pt | 2 | 100 % | 100 % | – | – | 2.00 | 12503 |
+| list | 4 | 75 % | 75 % | – | – | 2.00 | 5770 |
+| amount | 3 | 100 % | 100 % | – | – | 0.00 | 3 |
+| delay | 2 | 100 % | 100 % | – | – | 1.00 | 4680 |
+| yes_no | 3 | 100 % | 100 % | – | – | 0.33 | 5 |
 | vague | 2 | 100 % | – | 100 % | – | 0.00 | 0 |
-| compound | 1 | 100 % | 100 % | – | – | 3.00 | 8732 |
+| compound | 1 | 100 % | 100 % | – | – | 2.00 | 4843 |
 | out-of-scope | 5 | 80 % | – | 80 % | – | 0.40 | 1 |
-| smalltalk | 2 | 100 % | – | – | – | 0.00 | 0 |
+| smalltalk | 2 | 100 % | – | – | – | 0.00 | 1 |
 | faq | 55 | 100 % | 100 % | – | 100 % | 0.00 | 2 |
 <!-- eval-model:end -->
 

@@ -1,5 +1,5 @@
 {
- "at": "2026-10-31T18:35:51.604Z",
+ "at": "2026-10-31T18:37:34.217Z",
  "index": "6f23b48371bb",
  "model": null,
  "rows": [
@@ -44,7 +44,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "p03",
@@ -65,7 +65,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "p04",
@@ -190,7 +190,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 3
   },
   {
    "id": "t02",
@@ -210,7 +210,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 4
   },
   {
    "id": "t03",
@@ -230,7 +230,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "en01",
@@ -270,7 +270,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "en03",
@@ -290,26 +290,26 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "en04",
    "slice": "en",
    "q": "How many days of annual leave?",
    "page": null,
-   "kind": "absence",
-   "verdict": "pas_dans_le_guide",
-   "route": "none",
-   "primary": null,
+   "kind": "answer",
+   "verdict": "trouve",
+   "route": "site",
+   "primary": "conges conges#s1",
    "expected": "conges",
    "checks": {
-    "fiche": false
+    "fiche": true
    },
-   "ok": false,
+   "ok": true,
    "model_calls": 0,
-   "generated_by": null,
-   "validation": null,
-   "quote_ok": null,
+   "generated_by": "code",
+   "validation": "ok_code",
+   "quote_ok": true,
    "ms": 2
   },
   {
@@ -330,7 +330,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 0
   },
   {
    "id": "de02",
@@ -350,7 +350,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "pt01",
@@ -411,7 +411,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "l02",
@@ -431,7 +431,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "l03",
@@ -511,7 +511,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "a03",
@@ -571,7 +571,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "y01",
@@ -631,7 +631,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "v01",
@@ -651,7 +651,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 1
+   "ms": 0
   },
   {
    "id": "v02",
@@ -711,7 +711,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "o02",
@@ -731,7 +731,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 1
+   "ms": 0
   },
   {
    "id": "o03",
@@ -771,7 +771,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "o05",
@@ -791,7 +791,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 1
+   "ms": 0
   },
   {
    "id": "s01",
@@ -1083,7 +1083,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#13",
@@ -1104,7 +1104,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#14",
@@ -1146,7 +1146,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "faq#16",
@@ -1167,7 +1167,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#17",
@@ -1188,7 +1188,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "faq#18",
@@ -1209,7 +1209,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#19",
@@ -1272,7 +1272,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#22",
@@ -1482,7 +1482,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#32",
@@ -1607,7 +1607,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#38",
@@ -1649,7 +1649,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "faq#40",
@@ -1691,7 +1691,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 4
   },
   {
    "id": "faq#42",
@@ -1712,7 +1712,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 3
   },
   {
    "id": "faq#43",
@@ -1775,7 +1775,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#46",
@@ -1838,7 +1838,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#49",

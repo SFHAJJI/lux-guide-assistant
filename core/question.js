@@ -5,7 +5,7 @@ import { fold, rawTokens, stem, STOP, isQuestionWord, editDistance } from "./tex
 import { matchConcepts, matchPatterns } from "./dictionary.js";
 
 const LANG_MARKERS = {
-  en: "the what how where when which can do does is are my your you please thanks need get register should must".split(" "),
+  en: "the what how where when which can do does is are my your you please thanks need get register should must of many much to for with and or it there any from about i".split(" "),
   de: "der die das wie wo wann welche ich kann muss ist sind mein und nicht fur mit brauche".split(" "),
   pt: "os as como onde quando qual quais posso preciso tenho meu minha para com nao sim obrigado quanto custa documentos".split(" "),
   fr: "le la les comment quand quel quelle quels quelles est je dois faut pour avec mon ma mes des une un du combien".split(" ")

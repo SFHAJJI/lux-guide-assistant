@@ -1,5 +1,5 @@
 {
- "at": "2026-10-31T18:35:51.087Z",
+ "at": "2026-10-31T18:39:53.336Z",
  "index": "6f23b48371bb",
  "model": "gpt-4.1-mini",
  "rows": [
@@ -22,7 +22,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 7
+   "ms": 8
   },
   {
    "id": "p02",
@@ -65,7 +65,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "p04",
@@ -86,7 +86,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 4712
+   "ms": 4746
   },
   {
    "id": "e01",
@@ -107,7 +107,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 11204
+   "ms": 10572
   },
   {
    "id": "e02",
@@ -128,7 +128,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 3694
+   "ms": 3630
   },
   {
    "id": "e03",
@@ -149,7 +149,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 6
+   "ms": 3
   },
   {
    "id": "e04",
@@ -170,7 +170,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 6586
+   "ms": 5836
   },
   {
    "id": "t01",
@@ -186,11 +186,11 @@
     "fiche": true
    },
    "ok": true,
-   "model_calls": 3,
+   "model_calls": 2,
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 15634
+   "ms": 9729
   },
   {
    "id": "t02",
@@ -210,7 +210,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 10
+   "ms": 4
   },
   {
    "id": "t03",
@@ -250,7 +250,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 10256
+   "ms": 11318
   },
   {
    "id": "en02",
@@ -270,7 +270,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 7196
+   "ms": 6686
   },
   {
    "id": "en03",
@@ -290,27 +290,27 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 5663
+   "ms": 5590
   },
   {
    "id": "en04",
    "slice": "en",
    "q": "How many days of annual leave?",
    "page": null,
-   "kind": "absence",
-   "verdict": "pas_dans_le_guide",
-   "route": "none",
-   "primary": null,
+   "kind": "answer",
+   "verdict": "trouve",
+   "route": "site",
+   "primary": "conges conges#s2",
    "expected": "conges",
    "checks": {
-    "fiche": false
+    "fiche": true
    },
-   "ok": false,
-   "model_calls": 0,
-   "generated_by": null,
-   "validation": null,
-   "quote_ok": null,
-   "ms": 5
+   "ok": true,
+   "model_calls": 2,
+   "generated_by": "model",
+   "validation": "ok",
+   "quote_ok": true,
+   "ms": 4688
   },
   {
    "id": "de01",
@@ -330,7 +330,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 12774
+   "ms": 9963
   },
   {
    "id": "de02",
@@ -350,7 +350,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 5390
+   "ms": 5294
   },
   {
    "id": "pt01",
@@ -370,7 +370,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 11988
+   "ms": 12503
   },
   {
    "id": "pt02",
@@ -390,7 +390,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 4522
+   "ms": 4247
   },
   {
    "id": "l01",
@@ -411,14 +411,14 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 2702
+   "ms": 2412
   },
   {
    "id": "l02",
    "slice": "list",
    "q": "quels documents pour ouvrir un compte bancaire",
    "page": null,
-   "kind": "answer",
+   "kind": "absence",
    "verdict": "trouve",
    "route": "site",
    "primary": "bail bail#s1",
@@ -430,8 +430,8 @@
    "model_calls": 2,
    "generated_by": "model",
    "validation": "ok",
-   "quote_ok": true,
-   "ms": 4727
+   "quote_ok": null,
+   "ms": 4307
   },
   {
    "id": "l03",
@@ -448,10 +448,10 @@
    },
    "ok": true,
    "model_calls": 3,
-   "generated_by": "model",
-   "validation": "ok",
+   "generated_by": "code",
+   "validation": "rejected_then_code",
    "quote_ok": true,
-   "ms": 15514
+   "ms": 12781
   },
   {
    "id": "l04",
@@ -471,7 +471,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 6792
+   "ms": 5770
   },
   {
    "id": "a01",
@@ -511,7 +511,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 3
   },
   {
    "id": "a03",
@@ -551,7 +551,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 5569
+   "ms": 4680
   },
   {
    "id": "d02",
@@ -571,7 +571,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "y01",
@@ -591,7 +591,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 2314
+   "ms": 2055
   },
   {
    "id": "y02",
@@ -631,7 +631,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 6
+   "ms": 3
   },
   {
    "id": "v01",
@@ -687,11 +687,11 @@
     "fiche": true
    },
    "ok": true,
-   "model_calls": 3,
+   "model_calls": 2,
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 8732
+   "ms": 4843
   },
   {
    "id": "o01",
@@ -751,7 +751,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 5406
+   "ms": 5190
   },
   {
    "id": "o04",
@@ -791,7 +791,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "s01",
@@ -811,7 +811,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "s02",
@@ -831,7 +831,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#1",
@@ -852,7 +852,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 3
   },
   {
    "id": "faq#2",
@@ -873,7 +873,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 5
+   "ms": 4
   },
   {
    "id": "faq#3",
@@ -894,7 +894,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 4
   },
   {
    "id": "faq#4",
@@ -915,7 +915,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#5",
@@ -936,7 +936,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#6",
@@ -957,7 +957,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 3
   },
   {
    "id": "faq#7",
@@ -1188,7 +1188,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 2
   },
   {
    "id": "faq#18",
@@ -1314,7 +1314,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "faq#24",
@@ -1335,7 +1335,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#25",
@@ -1377,7 +1377,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 2
   },
   {
    "id": "faq#27",
@@ -1398,7 +1398,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#28",
@@ -1419,7 +1419,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#29",
@@ -1440,7 +1440,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#30",
@@ -1461,7 +1461,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#31",
@@ -1482,7 +1482,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#32",
@@ -1524,7 +1524,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "faq#34",
@@ -1545,7 +1545,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#35",
@@ -1586,7 +1586,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#37",
@@ -1607,7 +1607,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#38",
@@ -1649,7 +1649,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#40",
@@ -1691,7 +1691,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 3
   },
   {
    "id": "faq#42",
@@ -1733,7 +1733,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#44",
@@ -1775,7 +1775,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#46",
@@ -1796,7 +1796,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#47",
@@ -1817,7 +1817,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#48",
@@ -1859,7 +1859,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#50",
@@ -1943,7 +1943,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 0
   },
   {
    "id": "faq#54",
