@@ -102,6 +102,7 @@ const ficheIds = new Set(fiche.map((f) => f.id));
   }
   f.n_blocs = nb; f.n_sections = ns; f.words = parcours.reduce((a, p) => a + words(p.text), 0);
   fiche.push(f);
+  ficheIds.add("parcours");
 }
 
 // ---------- 3. FAQ with its backing span (sentence overlap, deterministic) ----------

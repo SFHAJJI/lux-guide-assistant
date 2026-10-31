@@ -49,25 +49,25 @@ fiche lue, ailleurs, fautes de frappe, anglais, allemand, portugais, liste, mont
 hors du guide.
 
 <!-- eval:start -->
-Sans modèle (96 questions, index `c80af274bccc`, 2026-10-31) : 88 % conformes, 0.00 appel modèle par question, médiane 0 ms.
+Sans modèle (96 questions, index `6f23b48371bb`, 2026-10-31) : 90 % conformes, 0.00 appel modèle par question, médiane 2 ms.
 
 | tranche | n | conforme | fiche | verdict | span | appels modèle / q | médiane ms |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| on-page | 4 | 100 % | 100 % | 100 % | – | 0.00 | 1 |
-| elsewhere | 4 | 75 % | 75 % | 100 % | – | 0.00 | 1 |
-| typo | 3 | 100 % | 100 % | – | – | 0.00 | 2 |
-| en | 4 | 0 % | 0 % | – | – | 0.00 | 1 |
+| on-page | 4 | 100 % | 100 % | 100 % | – | 0.00 | 3 |
+| elsewhere | 4 | 75 % | 75 % | 100 % | – | 0.00 | 2 |
+| typo | 3 | 100 % | 100 % | – | – | 0.00 | 4 |
+| en | 4 | 25 % | 25 % | – | – | 0.00 | 2 |
 | de | 2 | 0 % | 0 % | – | – | 0.00 | 1 |
-| pt | 2 | 0 % | 0 % | – | – | 0.00 | 0 |
-| list | 4 | 50 % | 50 % | – | – | 0.00 | 0 |
+| pt | 2 | 0 % | 0 % | – | – | 0.00 | 2 |
+| list | 4 | 75 % | 75 % | – | – | 0.00 | 2 |
 | amount | 3 | 100 % | 100 % | – | – | 0.00 | 1 |
-| delay | 2 | 100 % | 100 % | – | – | 0.00 | 0 |
-| yes_no | 3 | 100 % | 100 % | – | – | 0.00 | 1 |
+| delay | 2 | 100 % | 100 % | – | – | 0.00 | 2 |
+| yes_no | 3 | 100 % | 100 % | – | – | 0.00 | 2 |
 | vague | 2 | 100 % | – | 100 % | – | 0.00 | 0 |
-| compound | 1 | 100 % | 100 % | – | – | 0.00 | 0 |
+| compound | 1 | 100 % | 100 % | – | – | 0.00 | 4 |
 | out-of-scope | 5 | 80 % | – | 80 % | – | 0.00 | 1 |
 | smalltalk | 2 | 100 % | – | – | – | 0.00 | 0 |
-| faq | 55 | 100 % | 100 % | – | 100 % | 0.00 | 0 |
+| faq | 55 | 100 % | 100 % | – | 100 % | 0.00 | 2 |
 <!-- eval:end -->
 
 <!-- eval-model:start -->

@@ -1,7 +1,7 @@
 {
-  "built_at": "2026-10-31T17:31:30.630Z",
+  "built_at": "2026-10-31T18:26:32.682Z",
   "upstream_commit": "8de7372818adf9cbdffded53530791ffbffec930",
-  "index_sha256": "c80af274bccc",
+  "index_sha256": "6f23b48371bb",
   "fiches": 37,
   "sections": 154,
   "blocs": 409,
@@ -12,7 +12,10 @@
   "parcours_steps": 37,
   "links": 94,
   "sources": 64,
-  "dictionary": null,
+  "dictionary": {
+    "concepts": 57,
+    "patterns": 4
+  },
   "per_fiche": [
     {
       "id": "arrivee",

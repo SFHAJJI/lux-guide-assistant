@@ -14,12 +14,14 @@ export function scoreBlocs(pq, T, D, { faq = null, pageFiche = null } = {}) {
   const valueShape = ["amount", "delay", "date"].includes(pq.shape);
   const qStems = new Set([...direct.map((k) => k.stem), ...concepts.flatMap((c) => c.variants.filter((v) => v.lang === "fr").flatMap((v) => v.stems))]);
 
+  // The fiche bonus: the reader names the fiche (title or tag), or the dictionary routes there. The first fiche a concept
+  // lists is where the expert put the subject; the others only mention it.
   const ficheBonus = new Map();
   for (const f of T.fiche) {
     let b = 0;
     for (const s of qStems) if (f._titleStems.has(s) || f._tagStems.has(s)) { b = WEIGHTS.fiche; break; }
-    if (!b) for (const c of concepts) if (c.fiches.includes(f.id)) { b = WEIGHTS.fiche; break; }
-    if (b) ficheBonus.set(f.id, b);
+    for (const c of concepts) { const i = c.fiches.indexOf(f.id); if (i >= 0) b = Math.max(b, i === 0 ? WEIGHTS.fiche * 1.5 : WEIGHTS.fiche * 0.6); }
+    if (b) ficheBonus.set(f.id, Math.round(b * 100) / 100);
   }
   const sectionHit = new Map();
   for (const s of T.section) { if (s.level === 1) continue; for (const st of qStems) if (s._stems.has(st)) { sectionHit.set(s.section_id, true); break; } }

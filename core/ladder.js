@@ -16,10 +16,12 @@ export const ON_PAGE_RATIO = 0.75; // the page wins unless another fiche beats i
 // is about something else, however well its other words matched ("abonnement de salle de sport" is not housing).
 function rareWordsMissing(pq, top, T) {
   const rare = pq.direct.filter((k) => (k.idf ?? 0) >= 0.6);
-  if (pq.direct.length < 3 || !rare.length || pq.concepts.length) return false;
+  if (pq.direct.length < 3 || !rare.length) return false;
+  // A word the dictionary already explains (a variant of a matched concept) is not a missing subject.
+  const explained = new Set(pq.keywords.filter((k) => k.source === "dictionary").flatMap((k) => k.stems || []));
   const blocs = T.blocsByFiche.get(top.fiche_id) || [];
   const f = T.ficheById.get(top.fiche_id);
-  const missing = rare.filter((k) => !blocs.some((b) => b._stems.has(k.stem)) && !f._titleStems.has(k.stem) && !f._tagStems.has(k.stem));
+  const missing = rare.filter((k) => !explained.has(k.stem) && !blocs.some((b) => b._stems.has(k.stem)) && !f._titleStems.has(k.stem) && !f._tagStems.has(k.stem));
   return missing.length / pq.direct.length >= 0.34;
 }
 

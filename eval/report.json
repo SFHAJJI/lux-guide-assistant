@@ -1,6 +1,6 @@
 {
- "at": "2026-10-31T17:59:49.648Z",
- "index": "c80af274bccc",
+ "at": "2026-10-31T18:26:33.328Z",
+ "index": "6f23b48371bb",
  "model": null,
  "rows": [
   {
@@ -22,7 +22,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 8
   },
   {
    "id": "p02",
@@ -44,7 +44,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "p03",
@@ -54,7 +54,7 @@
    "kind": "answer",
    "verdict": "sur_cette_fiche",
    "route": "page",
-   "primary": "arrivee arrivee#s0",
+   "primary": "arrivee arrivee#s1",
    "expected": "arrivee",
    "checks": {
     "verdict": true,
@@ -65,7 +65,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 3
   },
   {
    "id": "p04",
@@ -86,7 +86,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 3
   },
   {
    "id": "e01",
@@ -96,7 +96,7 @@
    "kind": "answer",
    "verdict": "ailleurs",
    "route": "site",
-   "primary": "vehicule vehicule#s0",
+   "primary": "vehicule vehicule#s6",
    "expected": "vehicule",
    "checks": {
     "verdict": true,
@@ -107,7 +107,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "e02",
@@ -128,7 +128,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "e03",
@@ -149,7 +149,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 3
   },
   {
    "id": "e04",
@@ -170,7 +170,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "t01",
@@ -180,7 +180,7 @@
    "kind": "answer",
    "verdict": "trouve",
    "route": "site",
-   "primary": "vehicule vehicule#s0",
+   "primary": "vehicule vehicule#s6",
    "expected": "vehicule",
    "checks": {
     "fiche": true
@@ -190,7 +190,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 4
   },
   {
    "id": "t02",
@@ -210,7 +210,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 4
   },
   {
    "id": "t03",
@@ -237,20 +237,20 @@
    "slice": "en",
    "q": "How do I register my car?",
    "page": null,
-   "kind": "absence",
-   "verdict": "pas_dans_le_guide",
-   "route": "none",
-   "primary": null,
+   "kind": "answer",
+   "verdict": "trouve",
+   "route": "site",
+   "primary": "vehicule vehicule#s5",
    "expected": "vehicule",
    "checks": {
-    "fiche": false
+    "fiche": true
    },
-   "ok": false,
+   "ok": true,
    "model_calls": 0,
-   "generated_by": null,
-   "validation": null,
-   "quote_ok": null,
-   "ms": 1
+   "generated_by": "code",
+   "validation": "ok_code",
+   "quote_ok": true,
+   "ms": 3
   },
   {
    "id": "en02",
@@ -270,7 +270,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "en03",
@@ -290,7 +290,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "en04",
@@ -330,7 +330,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "de02",
@@ -370,7 +370,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "pt02",
@@ -390,7 +390,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "l01",
@@ -411,7 +411,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "l02",
@@ -431,7 +431,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "l03",
@@ -441,17 +441,17 @@
    "kind": "answer",
    "verdict": "trouve",
    "route": "site",
-   "primary": "parcours parcours#s4",
+   "primary": "vehicule vehicule#s6",
    "expected": "vehicule",
    "checks": {
-    "fiche": false
+    "fiche": true
    },
-   "ok": false,
+   "ok": true,
    "model_calls": 0,
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "l04",
@@ -471,7 +471,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "a01",
@@ -491,7 +491,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "a02",
@@ -511,7 +511,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "a03",
@@ -551,7 +551,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "d02",
@@ -571,7 +571,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "y01",
@@ -611,7 +611,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "y03",
@@ -621,7 +621,7 @@
    "kind": "answer",
    "verdict": "trouve",
    "route": "site",
-   "primary": "assurance_auto assurance_auto#s0",
+   "primary": "assurance_auto assurance_auto#s3",
    "expected": "assurance_auto",
    "checks": {
     "fiche": true
@@ -631,7 +631,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 3
   },
   {
    "id": "v01",
@@ -681,7 +681,7 @@
    "kind": "answer",
    "verdict": "trouve",
    "route": "site",
-   "primary": "vehicule vehicule#s1",
+   "primary": "vehicule vehicule#s5",
    "expected": "arrivee|vehicule",
    "checks": {
     "fiche": true
@@ -691,7 +691,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 4
   },
   {
    "id": "o01",
@@ -731,7 +731,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 1
+   "ms": 0
   },
   {
    "id": "o03",
@@ -751,7 +751,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "o04",
@@ -771,7 +771,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "o05",
@@ -791,7 +791,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 1
+   "ms": 0
   },
   {
    "id": "s01",
@@ -852,7 +852,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#2",
@@ -873,7 +873,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#3",
@@ -894,7 +894,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#4",
@@ -915,7 +915,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#5",
@@ -936,7 +936,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#6",
@@ -946,7 +946,7 @@
    "kind": "answer",
    "verdict": "trouve",
    "route": "faq_direct",
-   "primary": "frontalier frontalier#s0",
+   "primary": "frontalier frontalier#s1",
    "expected": "frontalier",
    "checks": {
     "fiche": true,
@@ -957,7 +957,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 3
   },
   {
    "id": "faq#7",
@@ -978,7 +978,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#8",
@@ -999,7 +999,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#9",
@@ -1020,7 +1020,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#10",
@@ -1041,7 +1041,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#11",
@@ -1083,7 +1083,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#13",
@@ -1104,7 +1104,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#14",
@@ -1125,7 +1125,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 0
   },
   {
    "id": "faq#15",
@@ -1146,7 +1146,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 3
   },
   {
    "id": "faq#16",
@@ -1167,7 +1167,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#17",
@@ -1188,7 +1188,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#18",
@@ -1209,7 +1209,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#19",
@@ -1251,7 +1251,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#21",
@@ -1272,7 +1272,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#22",
@@ -1293,7 +1293,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 3
   },
   {
    "id": "faq#23",
@@ -1314,7 +1314,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 3
   },
   {
    "id": "faq#24",
@@ -1335,7 +1335,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#25",
@@ -1356,7 +1356,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#26",
@@ -1377,7 +1377,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#27",
@@ -1398,7 +1398,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#28",
@@ -1419,7 +1419,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#29",
@@ -1440,7 +1440,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 3
   },
   {
    "id": "faq#30",
@@ -1450,7 +1450,7 @@
    "kind": "answer",
    "verdict": "trouve",
    "route": "faq_direct",
-   "primary": "vehicule vehicule#s5",
+   "primary": "vehicule vehicule#s6",
    "expected": "vehicule",
    "checks": {
     "fiche": true,
@@ -1461,7 +1461,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#31",
@@ -1482,7 +1482,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#32",
@@ -1524,7 +1524,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#34",
@@ -1545,7 +1545,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#35",
@@ -1586,7 +1586,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 3
   },
   {
    "id": "faq#37",
@@ -1596,7 +1596,7 @@
    "kind": "answer",
    "verdict": "trouve",
    "route": "faq_direct",
-   "primary": "impots_classes impots_classes#s0",
+   "primary": "impots_classes impots_classes#s3",
    "expected": "impots_classes",
    "checks": {
     "fiche": true,
@@ -1628,7 +1628,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#39",
@@ -1649,7 +1649,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#40",
@@ -1670,7 +1670,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#41",
@@ -1691,7 +1691,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 4
   },
   {
    "id": "faq#42",
@@ -1712,7 +1712,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 3
   },
   {
    "id": "faq#43",
@@ -1743,7 +1743,7 @@
    "kind": "answer",
    "verdict": "trouve",
    "route": "faq_direct",
-   "primary": "logement_abordable logement_abordable#s1",
+   "primary": "logement_abordable logement_abordable#s0",
    "expected": "logement_abordable",
    "checks": {
     "fiche": true,
@@ -1754,7 +1754,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#45",
@@ -1775,7 +1775,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#46",
@@ -1796,7 +1796,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#47",
@@ -1817,7 +1817,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#48",
@@ -1859,7 +1859,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "faq#50",
@@ -1880,7 +1880,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#51",
@@ -1901,7 +1901,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#52",
@@ -1943,7 +1943,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#54",
@@ -1964,7 +1964,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#55",
@@ -1985,7 +1985,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   }
  ]
 }

@@ -59,7 +59,7 @@ param(
   [string]$ChatSku = 'GlobalStandard',
   [int]$ChatCapacity = 50,
   [string]$EmbedModel = 'text-embedding-3-small',
-  [string]$EmbedSku = 'Standard',
+  [string]$EmbedSku = 'GlobalStandard',
   [int]$EmbedCapacity = 50,
   [string]$ApiVersion = '2024-10-21'
 )
