@@ -35,9 +35,11 @@ jobs:
         run: npm run build:site
       - name: Journey in a real browser (open a fiche, ask, see the highlight)
         run: |
-          npx --yes playwright@1.47.2 install --with-deps chromium
+          npm install --no-save playwright@1.47.2
+          npx playwright install --with-deps chromium
           node build/journey.mjs
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: evidence
           path: |
