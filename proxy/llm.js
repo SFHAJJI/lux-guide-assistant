@@ -17,7 +17,7 @@ export function createLlm(env = process.env) {
     return { url: `${base}/chat/completions`, headers: { authorization: `Bearer ${env.LLM_API_KEY}` } };
   }
 
-  async function complete({ system, user, schema, name = "answer", maxTokens = 900 }) {
+  async function complete({ system, user, schema, name = "answer", maxTokens = 1800 }) {
     const { url, headers } = endpoint();
     const body = {
       model: provider === "azure" ? undefined : model,

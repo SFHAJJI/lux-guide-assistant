@@ -1,5 +1,5 @@
 {
- "at": "2026-10-31T18:30:38.422Z",
+ "at": "2026-10-31T18:35:51.087Z",
  "index": "6f23b48371bb",
  "model": "gpt-4.1-mini",
  "rows": [
@@ -22,7 +22,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 9
+   "ms": 7
   },
   {
    "id": "p02",
@@ -44,7 +44,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "p03",
@@ -65,7 +65,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "p04",
@@ -86,7 +86,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 4498
+   "ms": 4712
   },
   {
    "id": "e01",
@@ -104,10 +104,10 @@
    },
    "ok": true,
    "model_calls": 2,
-   "generated_by": "code",
-   "validation": "rejected_then_code",
+   "generated_by": "model",
+   "validation": "ok",
    "quote_ok": true,
-   "ms": 10117
+   "ms": 11204
   },
   {
    "id": "e02",
@@ -128,7 +128,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 4252
+   "ms": 3694
   },
   {
    "id": "e03",
@@ -149,7 +149,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 7
+   "ms": 6
   },
   {
    "id": "e04",
@@ -170,7 +170,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 6521
+   "ms": 6586
   },
   {
    "id": "t01",
@@ -186,11 +186,11 @@
     "fiche": true
    },
    "ok": true,
-   "model_calls": 2,
-   "generated_by": "code",
-   "validation": "rejected_then_code",
+   "model_calls": 3,
+   "generated_by": "model",
+   "validation": "ok",
    "quote_ok": true,
-   "ms": 10356
+   "ms": 15634
   },
   {
    "id": "t02",
@@ -210,7 +210,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 14
+   "ms": 10
   },
   {
    "id": "t03",
@@ -230,7 +230,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 3
   },
   {
    "id": "en01",
@@ -247,10 +247,10 @@
    },
    "ok": true,
    "model_calls": 2,
-   "generated_by": "code",
-   "validation": "rejected_then_code",
+   "generated_by": "model",
+   "validation": "ok",
    "quote_ok": true,
-   "ms": 10789
+   "ms": 10256
   },
   {
    "id": "en02",
@@ -270,7 +270,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 7296
+   "ms": 7196
   },
   {
    "id": "en03",
@@ -290,7 +290,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 5801
+   "ms": 5663
   },
   {
    "id": "en04",
@@ -310,7 +310,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 4
+   "ms": 5
   },
   {
    "id": "de01",
@@ -327,10 +327,10 @@
    },
    "ok": true,
    "model_calls": 2,
-   "generated_by": "code",
-   "validation": "rejected_then_code",
+   "generated_by": "model",
+   "validation": "ok",
    "quote_ok": true,
-   "ms": 9817
+   "ms": 12774
   },
   {
    "id": "de02",
@@ -350,7 +350,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 5425
+   "ms": 5390
   },
   {
    "id": "pt01",
@@ -367,10 +367,10 @@
    },
    "ok": true,
    "model_calls": 2,
-   "generated_by": "code",
-   "validation": "rejected_then_code",
+   "generated_by": "model",
+   "validation": "ok",
    "quote_ok": true,
-   "ms": 9939
+   "ms": 11988
   },
   {
    "id": "pt02",
@@ -390,7 +390,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 4943
+   "ms": 4522
   },
   {
    "id": "l01",
@@ -411,14 +411,14 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 2517
+   "ms": 2702
   },
   {
    "id": "l02",
    "slice": "list",
    "q": "quels documents pour ouvrir un compte bancaire",
    "page": null,
-   "kind": "absence",
+   "kind": "answer",
    "verdict": "trouve",
    "route": "site",
    "primary": "bail bail#s1",
@@ -430,8 +430,8 @@
    "model_calls": 2,
    "generated_by": "model",
    "validation": "ok",
-   "quote_ok": null,
-   "ms": 4438
+   "quote_ok": true,
+   "ms": 4727
   },
   {
    "id": "l03",
@@ -447,11 +447,11 @@
     "fiche": true
    },
    "ok": true,
-   "model_calls": 2,
-   "generated_by": "code",
-   "validation": "rejected_then_code",
+   "model_calls": 3,
+   "generated_by": "model",
+   "validation": "ok",
    "quote_ok": true,
-   "ms": 9489
+   "ms": 15514
   },
   {
    "id": "l04",
@@ -467,11 +467,11 @@
     "fiche": true
    },
    "ok": true,
-   "model_calls": 3,
-   "generated_by": "code",
-   "validation": "rejected_then_code",
+   "model_calls": 2,
+   "generated_by": "model",
+   "validation": "ok",
    "quote_ok": true,
-   "ms": 10253
+   "ms": 6792
   },
   {
    "id": "a01",
@@ -491,7 +491,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 6
+   "ms": 5
   },
   {
    "id": "a02",
@@ -551,7 +551,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 4869
+   "ms": 5569
   },
   {
    "id": "d02",
@@ -571,7 +571,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 3
   },
   {
    "id": "y01",
@@ -591,7 +591,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 2241
+   "ms": 2314
   },
   {
    "id": "y02",
@@ -691,7 +691,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 8156
+   "ms": 8732
   },
   {
    "id": "o01",
@@ -711,7 +711,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "o02",
@@ -751,7 +751,7 @@
    "generated_by": "model",
    "validation": "ok",
    "quote_ok": true,
-   "ms": 4945
+   "ms": 5406
   },
   {
    "id": "o04",
@@ -852,7 +852,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 5
+   "ms": 4
   },
   {
    "id": "faq#2",
@@ -873,7 +873,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 5
   },
   {
    "id": "faq#3",
@@ -894,7 +894,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#4",
@@ -936,7 +936,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "faq#6",
@@ -957,7 +957,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 4
   },
   {
    "id": "faq#7",
@@ -1104,7 +1104,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#14",
@@ -1125,7 +1125,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 0
   },
   {
    "id": "faq#15",
@@ -1146,7 +1146,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#16",
@@ -1167,7 +1167,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "faq#17",
@@ -1188,7 +1188,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 4
   },
   {
    "id": "faq#18",
@@ -1335,7 +1335,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "faq#25",
@@ -1377,7 +1377,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 4
   },
   {
    "id": "faq#27",
@@ -1398,7 +1398,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#28",
@@ -1419,7 +1419,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 2
   },
   {
    "id": "faq#29",
@@ -1524,7 +1524,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#34",
@@ -1545,7 +1545,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#35",
@@ -1586,7 +1586,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "faq#37",
@@ -1607,7 +1607,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#38",

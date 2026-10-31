@@ -8,6 +8,7 @@ import { validateAnswer } from "./validate.js";
 import { justifyAbsence } from "./absence.js";
 import { buildGenerationPrompt, buildArbiterPrompt, ARBITER_SCHEMA } from "./prompts.js";
 import { blocsOfSpan, pathOf, sectionsBlocs } from "./tables.js";
+import { normalizeForQuote, sentences, stems } from "./text.js";
 
 const SMALLTALK = {
   greeting: { fr: "Bonjour. Posez votre question sur votre installation : démarches, logement, impôts, école, véhicule. Je réponds à partir des fiches du guide et je vous montre le passage.", en: "Hello. Ask about settling in: formalities, housing, taxes, school, your car. I answer from the guide's pages and show you the passage.", de: "Hallo. Fragen Sie zu Ihrer Ankunft: Formalitäten, Wohnen, Steuern, Schule, Auto. Ich antworte aus den Seiten des Guides und zeige die Stelle.", pt: "Olá. Pergunte sobre a sua instalação: formalidades, habitação, impostos, escola, carro. Respondo a partir das fichas do guia e mostro a passagem." },
@@ -51,11 +52,15 @@ export async function answerQuestion(input, deps) {
     const allowed = new Set(contextBlocs.map((b) => b.bloc_id));
     const p = buildGenerationPrompt(pq, R, T, contextBlocs);
     audit.prompt_version = p.prompt_version; audit.fragments_applied = p.fragments_applied;
-    let call = await safeCall(llm, { ...p, schema: ANSWER_SCHEMA, name: "answer", purpose: "generation" }, audit);
+    const maxTokens = ["list", "procedure"].includes(pq.shape) || pq.listing ? 2500 : 1400;
+    let call = await safeCall(llm, { ...p, schema: ANSWER_SCHEMA, name: "answer", purpose: "generation", maxTokens }, audit);
     let errors = call && call.json ? validateAnswer(call.json, { T, allowed, shape: pq.shape }) : ["no model output"];
+    // A quote the model shortened or smoothed is replaced by the sentence of the cited bloc it overlaps most:
+    // the snippet the reader sees is always the guide's, never the model's. A quote that matches nothing stays an error.
+    if (errors.length && call && call.json) { repairQuotes(call.json, T, audit); errors = validateAnswer(call.json, { T, allowed, shape: pq.shape }); }
     if (errors.length && call && call.json) {
-      const retry = await safeCall(llm, { system: p.system, user: p.user + `\n\nTa réponse précédente a été refusée par le validateur : ${errors.join(" ; ")}. Corrige : les identifiants de bloc doivent être ceux de la colonne BLOC et chaque quote doit être copiée mot pour mot depuis ces blocs.`, schema: ANSWER_SCHEMA, name: "answer", purpose: "generation_retry" }, audit);
-      if (retry && retry.json) { call = retry; errors = validateAnswer(retry.json, { T, allowed, shape: pq.shape }); }
+      const retry = await safeCall(llm, { system: p.system, user: p.user + `\n\nTa réponse précédente a été refusée par le validateur : ${errors.join(" ; ")}. Corrige : les identifiants de bloc doivent être ceux de la colonne BLOC et chaque quote doit être copiée mot pour mot depuis ces blocs.`, schema: ANSWER_SCHEMA, name: "answer", purpose: "generation_retry", maxTokens }, audit);
+      if (retry && retry.json) { call = retry; repairQuotes(call.json, T, audit); errors = validateAnswer(retry.json, { T, allowed, shape: pq.shape }); }
     }
     if (call && call.json && !errors.length) { answer = call.json; generated_by = "model"; validation = { status: "ok", errors: [] }; }
     else { validation = { status: "rejected", errors }; }
@@ -77,6 +82,28 @@ export async function answerQuestion(input, deps) {
     return finish({ kind: "absence", pq, R, absence, answer, audit }, t0);
   }
   return finish({ kind: "answer", pq, R, answer: resolve(answer, T), audit }, t0);
+}
+
+function repairQuotes(answer, T, audit) {
+  let repaired = 0;
+  for (const it of answer.items || []) {
+    for (const sp of it.spans || []) {
+      const blocs = blocsOfSpan(T, sp);
+      if (!blocs.length || !sp.quote) continue;
+      const hay = normalizeForQuote(blocs.map((b) => b.text).join(" "));
+      if (hay.includes(normalizeForQuote(sp.quote))) continue;
+      const want = new Set(stems(sp.quote));
+      let best = null;
+      for (const b of blocs) for (const s of sentences(b.text)) {
+        const have = new Set(stems(s));
+        let inter = 0; for (const w of want) if (have.has(w)) inter++;
+        const score = want.size ? inter / want.size : 0;
+        if (score >= 0.6 && (!best || score > best.score)) best = { s, score };
+      }
+      if (best) { sp.quote = best.s; repaired++; }
+    }
+  }
+  if (repaired) audit.quotes_repaired = (audit.quotes_repaired || 0) + repaired;
 }
 
 function contextFor(R, T) {

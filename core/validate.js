@@ -22,7 +22,9 @@ export function validateAnswer(answer, { T, allowed = null, shape = null } = {})
       if (!b) { errors.push(`item ${i} span ${j}: unknown bloc ${sp.bloc_end}`); return; }
       if (a.fiche_id !== b.fiche_id) { errors.push(`item ${i} span ${j}: blocs of two fiches`); return; }
       if (b.n < a.n) { errors.push(`item ${i} span ${j}: bloc_end before bloc_start`); return; }
-      if (b.n - a.n > 4) errors.push(`item ${i} span ${j}: span of ${b.n - a.n + 1} blocs, too wide`);
+      // A list or a procedure may cite a run of steps; a fact cites a few blocs at most.
+      const maxWidth = ["list", "procedure"].includes(shape) ? 12 : 4;
+      if (b.n - a.n > maxWidth) errors.push(`item ${i} span ${j}: span of ${b.n - a.n + 1} blocs, too wide`);
       if (allowed && (!allowed.has(a.bloc_id) || !allowed.has(b.bloc_id))) errors.push(`item ${i} span ${j}: bloc outside the passages provided`);
       const q = normalizeForQuote(sp.quote);
       if (!q) { errors.push(`item ${i} span ${j}: empty quote`); return; }
