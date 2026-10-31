@@ -109,6 +109,22 @@ function demarrer() {
 window.addEventListener("hashchange", () => { if (!location.hash.startsWith("#fiche/")) clearMarks(); });
 
 window.ASSISTANT = { envoyer, demarrer, version: config.commit, client, get lastReply() { return lastReply; } };
+
+// On the assembled copy, the site's own `envoyer` hands over to this module (patched at build time). Injected into the
+// original site by the bookmarklet, nothing is patched: the inputs and buttons are re-wired here, by replacing them so
+// the site's listeners go away with the old elements.
+if (!window.LUX_ASSISTANT_PATCHED) {
+  for (const [inputId, buttonId] of [["chat-input", "chat-send"], ["widget-input", "widget-send"]]) {
+    const input = document.getElementById(inputId), button = document.getElementById(buttonId);
+    if (!input || !button) continue;
+    const i2 = input.cloneNode(true), b2 = button.cloneNode(true);
+    input.replaceWith(i2); button.replaceWith(b2);
+    b2.addEventListener("click", () => envoyer());
+    i2.addEventListener("keydown", (e) => { if (e.key === "Enter") envoyer(); });
+  }
+  const reset = document.getElementById("chat-reset");
+  if (reset) { const r2 = reset.cloneNode(true); reset.replaceWith(r2); r2.addEventListener("click", () => { logs().forEach((l) => { l.innerHTML = ""; }); lastFiche = null; demarrer(); }); }
+}
 // The site greeted (or not) before this module loaded: the conversation starts here, with the assistant's greeting.
 logs().forEach((l) => { l.innerHTML = ""; });
 demarrer();

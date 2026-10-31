@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'assistant sur le site original : le marque-page</title>
+<style>
+  body { font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; color: #1c2430; background: #f6f7f9; margin: 0; padding: 40px 20px; }
+  main { max-width: 640px; margin: 0 auto; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 28px 32px; }
+  h1 { font-size: 22px; margin: 0 0 12px; }
+  p { margin: 10px 0; }
+  .marque { display: inline-block; padding: 10px 16px; margin: 14px 0; border: 2px dashed #2b6cb0; border-radius: 8px; color: #2b6cb0; font-weight: 600; text-decoration: none; cursor: grab; }
+  ol { padding-left: 22px; }
+  code { background: #f0f2f5; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  .note { color: #5c6673; font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>L'assistant sur le site original, sans copie</h1>
+  <p>La démonstration tourne sur une copie du guide. Ce marque-page charge le même module dans le site original,
+    <a href="https://lux-guide.github.io/" rel="noopener">lux-guide.github.io</a>, au moment où vous le lisez : rien n'y est
+    installé, rien n'y est modifié, tout repart au rechargement de la page.</p>
+  <ol>
+    <li>Glissez ce lien dans votre barre de favoris : <a class="marque" id="marque" href="#">Assistant du guide</a></li>
+    <li>Ouvrez <a href="https://lux-guide.github.io/#fiche/bail" rel="noopener">lux-guide.github.io/#fiche/bail</a>.</li>
+    <li>Cliquez sur le favori. Le panneau « Assistant » du site devient cet assistant : posez une question.</li>
+  </ol>
+  <p class="note">Ce que fait le marque-page : il ajoute au site une feuille de style et un script, servis depuis cette
+    adresse, qui reprennent le champ de saisie et le bouton « Envoyer » de l'assistant du site. Le modèle, s'il est
+    disponible, est appelé par le même relais que la démonstration ; sinon le module répond dans le navigateur.</p>
+</main>
+<script>
+  const base = new URL("./", location.href).href;
+  const code = `(function(){if(window.ASSISTANT){alert("L'assistant est déjà chargé.");return;}var l=document.createElement("link");l.rel="stylesheet";l.href="${base}assistant.css";document.head.appendChild(l);var s=document.createElement("script");s.type="module";s.src="${base}assistant.js";document.body.appendChild(s);})();`;
+  document.getElementById("marque").href = "javascript:" + encodeURIComponent(code);
+</script>
+</body>
+</html>

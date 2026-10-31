@@ -57,7 +57,7 @@ const idxPath = join(site, "index.html");
 let idx = readFileSync(idxPath, "utf8");
 const banner = `<div id="demo-bandeau" role="note">Démonstration : l'assistant de cette copie du guide est un exercice d'ingénierie. Le guide est l'œuvre de son auteur : <a href="https://lux-guide.github.io/" rel="noopener">lux-guide.github.io</a>. Copie retirée sur simple demande.</div>\n`;
 idx = idx.replace("</head>", '<link rel="stylesheet" href="assistant/assistant.css">\n</head>');
-idx = idx.replace("</body>", banner + '<script type="module" src="assistant/assistant.js"></script>\n</body>');
+idx = idx.replace("</body>", banner + '<script>window.LUX_ASSISTANT_PATCHED = true;</script>\n<script type="module" src="assistant/assistant.js"></script>\n</body>');
 writeFileSync(idxPath, idx);
 writeFileSync(join(site, ".nojekyll"), "");
 console.log(`site/ assembled (proxy: ${proxy || "none, local mode only"})`);
