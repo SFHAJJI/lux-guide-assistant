@@ -6,6 +6,7 @@
 // Everything it decides is written in the result, with the method that produced each candidate.
 import { matchFaq } from "./faq.js";
 import { scoreBlocs, conceptSweep } from "./detectors.js";
+import { stems } from "./text.js";
 
 export const MIN_SCORE = 1.25;     // below this, nothing in the guide carries the answer; a hit must also be specific
 export const CLEAR_TOP = 2.5;      // a top score at or above this, with a clear margin, needs no arbiter
@@ -16,9 +17,11 @@ export const ON_PAGE_RATIO = 0.75; // the page wins unless another fiche beats i
 // is about something else, however well its other words matched ("abonnement de salle de sport" is not housing).
 function rareWordsMissing(pq, top, T) {
   const rare = pq.direct.filter((k) => (k.idf ?? 0) >= 0.6);
-  if (pq.direct.length < 3 || !rare.length) return false;
+  // Only for French questions: the reader's words in another language are never in the guide's text.
+  if (pq.language !== "fr" || pq.direct.length < 3 || !rare.length) return false;
   // A word the dictionary already explains (a variant of a matched concept) is not a missing subject.
   const explained = new Set(pq.keywords.filter((k) => k.source === "dictionary").flatMap((k) => k.stems || []));
+  for (const c of pq.concepts) for (const s of stems(c.variant)) explained.add(s);
   const blocs = T.blocsByFiche.get(top.fiche_id) || [];
   const f = T.ficheById.get(top.fiche_id);
   const missing = rare.filter((k) => !explained.has(k.stem) && !blocs.some((b) => b._stems.has(k.stem)) && !f._titleStems.has(k.stem) && !f._tagStems.has(k.stem));

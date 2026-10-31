@@ -1,5 +1,5 @@
 {
- "at": "2026-10-31T18:26:33.328Z",
+ "at": "2026-10-31T18:27:02.098Z",
  "index": "6f23b48371bb",
  "model": null,
  "rows": [
@@ -86,7 +86,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "e01",
@@ -149,7 +149,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "e04",
@@ -170,7 +170,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "t01",
@@ -190,7 +190,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 5
   },
   {
    "id": "t02",
@@ -210,7 +210,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 4
+   "ms": 3
   },
   {
    "id": "t03",
@@ -230,7 +230,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 4
   },
   {
    "id": "en01",
@@ -250,47 +250,47 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "en02",
    "slice": "en",
    "q": "How do I get my social security number?",
    "page": null,
-   "kind": "absence",
-   "verdict": "pas_dans_le_guide",
-   "route": "none",
-   "primary": null,
+   "kind": "answer",
+   "verdict": "trouve",
+   "route": "site",
+   "primary": "arrivee arrivee#s2",
    "expected": "arrivee|matricule",
    "checks": {
-    "fiche": false
+    "fiche": true
    },
-   "ok": false,
+   "ok": true,
    "model_calls": 0,
-   "generated_by": null,
-   "validation": null,
-   "quote_ok": null,
-   "ms": 2
+   "generated_by": "code",
+   "validation": "ok_code",
+   "quote_ok": true,
+   "ms": 1
   },
   {
    "id": "en03",
    "slice": "en",
    "q": "Is public transport free?",
    "page": null,
-   "kind": "absence",
-   "verdict": "pas_dans_le_guide",
-   "route": "none",
-   "primary": null,
+   "kind": "answer",
+   "verdict": "trouve",
+   "route": "site",
+   "primary": "transport transport#s0",
    "expected": "transport",
    "checks": {
-    "fiche": false
+    "fiche": true
    },
-   "ok": false,
+   "ok": true,
    "model_calls": 0,
-   "generated_by": null,
-   "validation": null,
-   "quote_ok": null,
-   "ms": 1
+   "generated_by": "code",
+   "validation": "ok_code",
+   "quote_ok": true,
+   "ms": 2
   },
   {
    "id": "en04",
@@ -310,26 +310,26 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "de01",
    "slice": "de",
    "q": "Wie melde ich mein Auto an?",
    "page": null,
-   "kind": "absence",
-   "verdict": "pas_dans_le_guide",
-   "route": "none",
-   "primary": null,
+   "kind": "answer",
+   "verdict": "trouve",
+   "route": "site",
+   "primary": "vehicule vehicule#s7",
    "expected": "vehicule",
    "checks": {
-    "fiche": false
+    "fiche": true
    },
-   "ok": false,
+   "ok": true,
    "model_calls": 0,
-   "generated_by": null,
-   "validation": null,
-   "quote_ok": null,
+   "generated_by": "code",
+   "validation": "ok_code",
+   "quote_ok": true,
    "ms": 1
   },
   {
@@ -337,19 +337,19 @@
    "slice": "de",
    "q": "Ist der öffentliche Verkehr kostenlos?",
    "page": null,
-   "kind": "absence",
-   "verdict": "pas_dans_le_guide",
-   "route": "none",
-   "primary": null,
+   "kind": "answer",
+   "verdict": "trouve",
+   "route": "site",
+   "primary": "choisir_commune choisir_commune#s1",
    "expected": "transport",
    "checks": {
     "fiche": false
    },
    "ok": false,
    "model_calls": 0,
-   "generated_by": null,
-   "validation": null,
-   "quote_ok": null,
+   "generated_by": "code",
+   "validation": "ok_code",
+   "quote_ok": true,
    "ms": 1
   },
   {
@@ -357,19 +357,19 @@
    "slice": "pt",
    "q": "Como registar o meu carro no Luxemburgo?",
    "page": null,
-   "kind": "absence",
-   "verdict": "pas_dans_le_guide",
-   "route": "none",
-   "primary": null,
+   "kind": "answer",
+   "verdict": "trouve",
+   "route": "site",
+   "primary": "vehicule vehicule#s5",
    "expected": "vehicule",
    "checks": {
-    "fiche": false
+    "fiche": true
    },
-   "ok": false,
+   "ok": true,
    "model_calls": 0,
-   "generated_by": null,
-   "validation": null,
-   "quote_ok": null,
+   "generated_by": "code",
+   "validation": "ok_code",
+   "quote_ok": true,
    "ms": 2
   },
   {
@@ -377,20 +377,20 @@
    "slice": "pt",
    "q": "Quais documentos levar à comuna?",
    "page": null,
-   "kind": "absence",
-   "verdict": "pas_dans_le_guide",
-   "route": "none",
-   "primary": null,
+   "kind": "answer",
+   "verdict": "trouve",
+   "route": "site",
+   "primary": "arrivee arrivee#s3",
    "expected": "arrivee",
    "checks": {
-    "fiche": false
+    "fiche": true
    },
-   "ok": false,
+   "ok": true,
    "model_calls": 0,
-   "generated_by": null,
-   "validation": null,
-   "quote_ok": null,
-   "ms": 2
+   "generated_by": "code",
+   "validation": "ok_code",
+   "quote_ok": true,
+   "ms": 1
   },
   {
    "id": "l01",
@@ -411,7 +411,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "l02",
@@ -511,7 +511,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "a03",
@@ -551,7 +551,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "d02",
@@ -571,7 +571,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "y01",
@@ -631,7 +631,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 2
   },
   {
    "id": "v01",
@@ -731,7 +731,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 0
+   "ms": 1
   },
   {
    "id": "o03",
@@ -771,7 +771,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 1
+   "ms": 0
   },
   {
    "id": "o05",
@@ -791,7 +791,7 @@
    "generated_by": null,
    "validation": null,
    "quote_ok": null,
-   "ms": 0
+   "ms": 2
   },
   {
    "id": "s01",
@@ -873,7 +873,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#3",
@@ -894,7 +894,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#4",
@@ -936,7 +936,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#6",
@@ -1188,7 +1188,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#18",
@@ -1209,7 +1209,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#19",
@@ -1293,7 +1293,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 3
+   "ms": 4
   },
   {
    "id": "faq#23",
@@ -1356,7 +1356,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#26",
@@ -1377,7 +1377,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#27",
@@ -1398,7 +1398,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#28",
@@ -1482,7 +1482,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#32",
@@ -1545,7 +1545,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#35",
@@ -1628,7 +1628,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#39",
@@ -1649,7 +1649,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 3
   },
   {
    "id": "faq#40",
@@ -1733,7 +1733,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#44",
@@ -1796,7 +1796,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 2
+   "ms": 1
   },
   {
    "id": "faq#47",
@@ -1817,7 +1817,7 @@
    "generated_by": "code",
    "validation": "ok_code",
    "quote_ok": true,
-   "ms": 1
+   "ms": 2
   },
   {
    "id": "faq#48",
