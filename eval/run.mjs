@@ -61,6 +61,16 @@ else { lines.push(`| id | tranche | question | obtenu | attendu |`, `|---|---|--
 lines.push(``, `## Toutes les questions`, ``, `| id | tranche | page | question | verdict | fiche › section | appels | ms | ok |`, `|---|---|---|---|---|---|---:|---:|:-:|`);
 for (const r of rows) lines.push(`| ${r.id} | ${r.slice} | ${r.page || ""} | ${r.q.replace(/\|/g, "/")} | ${r.kind === "answer" || r.kind === "absence" ? r.verdict : r.kind} | ${r.primary || ""} | ${r.model_calls} | ${r.ms} | ${r.ok ? "✓" : "✗"} |`);
 writeFileSync(join(root, "eval", useModel ? "report-model.md" : "report.md"), lines.join("\n") + "\n");
+// The slice table also lands in the README, between its markers, so the front page shows the current numbers.
+const readmePath = join(root, "README.md");
+if (existsSync(readmePath)) {
+  const table = lines.slice(lines.indexOf("| tranche | n | conforme | fiche | verdict | span | appels modèle / q | médiane ms |"), lines.indexOf("") > 0 ? lines.findIndex((l, i) => i > 8 && l === "") : undefined).join("\n");
+  const head = `${useModel ? "Avec le modèle" : "Sans modèle"} (${rows.length} questions, index \`${coverage.index_sha256}\`, ${new Date().toISOString().slice(0, 10)}) : ${pct(rows.filter((r) => r.ok).length, rows.length)} conformes, ${(rows.reduce((a, r) => a + r.model_calls, 0) / rows.length).toFixed(2)} appel modèle par question, médiane ${med(rows.map((r) => r.ms))} ms.`;
+  const readme = readFileSync(readmePath, "utf8");
+  const marker = useModel ? "eval-model" : "eval";
+  const re = new RegExp(`<!-- ${marker}:start -->[\\s\\S]*?<!-- ${marker}:end -->`);
+  if (re.test(readme)) writeFileSync(readmePath, readme.replace(re, `<!-- ${marker}:start -->\n${head}\n\n${table}\n<!-- ${marker}:end -->`));
+}
 writeFileSync(join(root, "eval", useModel ? "report-model.json" : "report.json"), JSON.stringify({ at: new Date().toISOString(), index: coverage.index_sha256, model: useModel ? llm.model : null, rows }, null, 1));
 console.log(lines.slice(0, 6 + slices.length + 2).join("\n"));
 console.log(`\n${bad.length} écart(s)`);
