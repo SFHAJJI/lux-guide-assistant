@@ -1,0 +1,20 @@
+{
+  "name": "lux-guide-assistant",
+  "version": "0.1.0",
+  "description": "Un assistant documentaire pour le guide « Vivre au Luxembourg » : il reconnaît la fiche lue, ouvre la bonne fiche quand la réponse est ailleurs, et surligne le passage qui la porte.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "fetch": "node build/fetch-upstream.mjs",
+    "build:index": "node build/build-index.mjs",
+    "build:site": "node build/build-site.mjs",
+    "build": "npm run fetch && npm run build:index && npm run build:site",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "eval": "node eval/run.mjs",
+    "serve": "node proxy/server.mjs",
+    "serve:site": "node build/serve-site.mjs"
+  },
+  "devDependencies": { "yaml": "^2.6.0" }
+}

@@ -1,0 +1,179 @@
+# The labelled set, sliced by question type and failure mode. The 55 FAQ entries of the guide are added automatically
+# by eval/run.mjs (slice "faq": expected fiche and backing span come from the index). The questions below are the
+# other slices: on-page, elsewhere, typo, EN/DE/PT, listing, amount, delay, yes/no, vague, compound, out-of-scope.
+# expect.fiche: the fiche that must be primary. expect.section: a substring of the section title (optional).
+# expect.verdict: sur_cette_fiche | ailleurs | trouve | pas_dans_le_guide | precisez.
+version: 1
+questions:
+  - id: p01
+    slice: on-page
+    q: Combien de mois de loyer pour la garantie locative ?
+    page: fiche/bail
+    expect: { fiche: bail, verdict: sur_cette_fiche }
+  - id: p02
+    slice: on-page
+    q: et l'état des lieux, il est obligatoire ?
+    page: fiche/bail
+    expect: { fiche: bail, verdict: sur_cette_fiche, section: état des lieux }
+  - id: p03
+    slice: on-page
+    q: combien de jours pour déclarer son arrivée
+    page: fiche/arrivee
+    expect: { fiche: arrivee, verdict: sur_cette_fiche }
+  - id: p04
+    slice: on-page
+    q: quel délai pour immatriculer après l'arrivée ?
+    page: fiche/vehicule
+    expect: { fiche: vehicule, verdict: sur_cette_fiche }
+  - id: e01
+    slice: elsewhere
+    q: Comment immatriculer ma voiture ?
+    page: fiche/bail
+    expect: { fiche: vehicule, verdict: ailleurs }
+  - id: e02
+    slice: elsewhere
+    q: comment obtenir mon matricule ?
+    page: fiche/transport
+    expect: { fiche: arrivee, verdict: ailleurs }
+  - id: e03
+    slice: elsewhere
+    q: les transports publics sont-ils gratuits ?
+    page: fiche/bail
+    expect: { fiche: transport, verdict: ailleurs }
+  - id: e04
+    slice: elsewhere
+    q: quelle classe d'impôt pour un couple marié ?
+    page: fiche/ecole
+    expect: { fiche: impots_classes, verdict: ailleurs }
+  - id: t01
+    slice: typo
+    q: comment imatriculer ma voitur
+    expect: { fiche: vehicule }
+  - id: t02
+    slice: typo
+    q: garanti locativ plafonée à combien de mois
+    expect: { fiche: bail }
+  - id: t03
+    slice: typo
+    q: alocations familliales montant
+    expect: { fiche: allocations }
+  - id: en01
+    slice: en
+    q: How do I register my car?
+    expect: { fiche: vehicule }
+  - id: en02
+    slice: en
+    q: How do I get my social security number?
+    expect: { fiche_any: [arrivee, matricule] }
+  - id: en03
+    slice: en
+    q: Is public transport free?
+    expect: { fiche: transport }
+  - id: en04
+    slice: en
+    q: How many days of annual leave?
+    expect: { fiche: conges }
+  - id: de01
+    slice: de
+    q: Wie melde ich mein Auto an?
+    expect: { fiche: vehicule }
+  - id: de02
+    slice: de
+    q: Ist der öffentliche Verkehr kostenlos?
+    expect: { fiche: transport }
+  - id: pt01
+    slice: pt
+    q: Como registar o meu carro no Luxemburgo?
+    expect: { fiche: vehicule }
+  - id: pt02
+    slice: pt
+    q: Quais documentos levar à comuna?
+    expect: { fiche: arrivee }
+  - id: l01
+    slice: list
+    q: Quels documents apporter à la commune ?
+    expect: { fiche: arrivee, section: apporter }
+  - id: l02
+    slice: list
+    q: quels documents pour ouvrir un compte bancaire
+    expect: { fiche: banque }
+  - id: l03
+    slice: list
+    q: quelles sont les étapes pour immatriculer un véhicule importé
+    expect: { fiche: vehicule }
+  - id: l04
+    slice: list
+    q: quelles démarches avant le départ ?
+    expect: { fiche: parcours }
+  - id: a01
+    slice: amount
+    q: combien coûte l'immatriculation ?
+    expect: { fiche: vehicule }
+  - id: a02
+    slice: amount
+    q: montant de base des allocations familiales
+    expect: { fiche: allocations }
+  - id: a03
+    slice: amount
+    q: plafond de la TVA à 3 % pour un logement
+    expect: { fiche: achat }
+  - id: d01
+    slice: delay
+    q: délai pour l'installation d'internet
+    expect: { fiche: telecom }
+  - id: d02
+    slice: delay
+    q: depuis quand les transports publics sont gratuits ?
+    expect: { fiche: transport }
+  - id: y01
+    slice: yes_no
+    q: est-ce que la double nationalité est admise ?
+    expect: { fiche: nationalite }
+  - id: y02
+    slice: yes_no
+    q: est-ce qu'un permis de conduire européen reste valable ?
+    expect: { fiche: permis }
+  - id: y03
+    slice: yes_no
+    q: l'assurance responsabilité civile est-elle obligatoire pour une voiture ?
+    expect: { fiche: assurance_auto }
+  - id: v01
+    slice: vague
+    q: aide
+    expect: { verdict: precisez }
+  - id: v02
+    slice: vague
+    q: "?"
+    expect: { verdict: precisez }
+  - id: c01
+    slice: compound
+    q: quel délai pour la déclaration d'arrivée et pour immatriculer ma voiture ?
+    expect: { fiche_any: [arrivee, vehicule] }
+  - id: o01
+    slice: out-of-scope
+    q: Quel est le prix d'un abonnement de ski à Pétange ?
+    expect: { verdict: pas_dans_le_guide }
+  - id: o02
+    slice: out-of-scope
+    q: quelle est la meilleure pizzeria d'Esch ?
+    expect: { verdict: pas_dans_le_guide }
+  - id: o03
+    slice: out-of-scope
+    q: comment déclarer mes impôts en Belgique ?
+    expect: { verdict: pas_dans_le_guide }
+  - id: o04
+    slice: out-of-scope
+    q: what is the capital of Portugal
+    expect: { verdict: pas_dans_le_guide }
+  - id: o05
+    slice: out-of-scope
+    q: combien coûte un abonnement de salle de sport ?
+    expect: { verdict: pas_dans_le_guide }
+  - id: s01
+    slice: smalltalk
+    q: bonjour
+    expect: { kind: smalltalk }
+  - id: s02
+    slice: smalltalk
+    q: merci beaucoup !
+    expect: { kind: smalltalk }

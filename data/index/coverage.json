@@ -1,0 +1,277 @@
+{
+  "built_at": "2026-10-31T17:31:30.630Z",
+  "upstream_commit": "8de7372818adf9cbdffded53530791ffbffec930",
+  "index_sha256": "c80af274bccc",
+  "fiches": 37,
+  "sections": 154,
+  "blocs": 409,
+  "words": 12613,
+  "faq": 55,
+  "faq_with_span": 54,
+  "faq_unresolved_fiche": [],
+  "parcours_steps": 37,
+  "links": 94,
+  "sources": 64,
+  "dictionary": null,
+  "per_fiche": [
+    {
+      "id": "arrivee",
+      "kind": "article",
+      "sections": 5,
+      "blocs": 12,
+      "words": 421
+    },
+    {
+      "id": "matricule",
+      "kind": "article",
+      "sections": 4,
+      "blocs": 8,
+      "words": 247
+    },
+    {
+      "id": "assurance_sante",
+      "kind": "article",
+      "sections": 5,
+      "blocs": 10,
+      "words": 331
+    },
+    {
+      "id": "administration",
+      "kind": "article",
+      "sections": 5,
+      "blocs": 10,
+      "words": 346
+    },
+    {
+      "id": "luxtrust",
+      "kind": "article",
+      "sections": 4,
+      "blocs": 7,
+      "words": 207
+    },
+    {
+      "id": "recherche_logement",
+      "kind": "article",
+      "sections": 5,
+      "blocs": 9,
+      "words": 286
+    },
+    {
+      "id": "choisir_commune",
+      "kind": "article",
+      "sections": 5,
+      "blocs": 11,
+      "words": 446
+    },
+    {
+      "id": "frontalier",
+      "kind": "article",
+      "sections": 6,
+      "blocs": 17,
+      "words": 840
+    },
+    {
+      "id": "reclamation",
+      "kind": "article",
+      "sections": 4,
+      "blocs": 7,
+      "words": 193
+    },
+    {
+      "id": "emmenagement",
+      "kind": "article",
+      "sections": 4,
+      "blocs": 6,
+      "words": 220
+    },
+    {
+      "id": "bail",
+      "kind": "article",
+      "sections": 5,
+      "blocs": 8,
+      "words": 300
+    },
+    {
+      "id": "assurance_habitation",
+      "kind": "article",
+      "sections": 6,
+      "blocs": 10,
+      "words": 383
+    },
+    {
+      "id": "achat",
+      "kind": "article",
+      "sections": 3,
+      "blocs": 8,
+      "words": 325
+    },
+    {
+      "id": "logement_abordable",
+      "kind": "article",
+      "sections": 6,
+      "blocs": 15,
+      "words": 444
+    },
+    {
+      "id": "impots_classes",
+      "kind": "article",
+      "sections": 6,
+      "blocs": 16,
+      "words": 677
+    },
+    {
+      "id": "deductions",
+      "kind": "article",
+      "sections": 5,
+      "blocs": 10,
+      "words": 286
+    },
+    {
+      "id": "conseil_fiscal",
+      "kind": "article",
+      "sections": 6,
+      "blocs": 11,
+      "words": 528
+    },
+    {
+      "id": "impatries",
+      "kind": "article",
+      "sections": 4,
+      "blocs": 10,
+      "words": 348
+    },
+    {
+      "id": "interets",
+      "kind": "article",
+      "sections": 4,
+      "blocs": 12,
+      "words": 358
+    },
+    {
+      "id": "independant",
+      "kind": "article",
+      "sections": 4,
+      "blocs": 8,
+      "words": 270
+    },
+    {
+      "id": "allocations",
+      "kind": "article",
+      "sections": 3,
+      "blocs": 12,
+      "words": 266
+    },
+    {
+      "id": "conges",
+      "kind": "article",
+      "sections": 3,
+      "blocs": 7,
+      "words": 221
+    },
+    {
+      "id": "emploi",
+      "kind": "article",
+      "sections": 2,
+      "blocs": 7,
+      "words": 200
+    },
+    {
+      "id": "banque",
+      "kind": "article",
+      "sections": 2,
+      "blocs": 7,
+      "words": 190
+    },
+    {
+      "id": "cout_vie",
+      "kind": "article",
+      "sections": 3,
+      "blocs": 8,
+      "words": 233
+    },
+    {
+      "id": "ecole",
+      "kind": "article",
+      "sections": 5,
+      "blocs": 8,
+      "words": 268
+    },
+    {
+      "id": "garde",
+      "kind": "article",
+      "sections": 2,
+      "blocs": 7,
+      "words": 196
+    },
+    {
+      "id": "sante_pratique",
+      "kind": "article",
+      "sections": 2,
+      "blocs": 7,
+      "words": 172
+    },
+    {
+      "id": "permis",
+      "kind": "article",
+      "sections": 2,
+      "blocs": 7,
+      "words": 213
+    },
+    {
+      "id": "vehicule",
+      "kind": "guidee",
+      "sections": 9,
+      "blocs": 46,
+      "words": 1200
+    },
+    {
+      "id": "assurance_auto",
+      "kind": "article",
+      "sections": 5,
+      "blocs": 12,
+      "words": 464
+    },
+    {
+      "id": "transport",
+      "kind": "article",
+      "sections": 2,
+      "blocs": 7,
+      "words": 195
+    },
+    {
+      "id": "telecom",
+      "kind": "article",
+      "sections": 6,
+      "blocs": 10,
+      "words": 366
+    },
+    {
+      "id": "langues",
+      "kind": "article",
+      "sections": 2,
+      "blocs": 7,
+      "words": 181
+    },
+    {
+      "id": "nationalite",
+      "kind": "article",
+      "sections": 2,
+      "blocs": 7,
+      "words": 172
+    },
+    {
+      "id": "dechets",
+      "kind": "article",
+      "sections": 2,
+      "blocs": 7,
+      "words": 182
+    },
+    {
+      "id": "parcours",
+      "kind": "parcours",
+      "sections": 6,
+      "blocs": 38,
+      "words": 438
+    }
+  ]
+}

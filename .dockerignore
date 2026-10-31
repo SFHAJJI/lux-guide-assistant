@@ -1,0 +1,10 @@
+node_modules
+upstream
+site
+.git
+eval
+tests
+docs
+infra
+.github
+proxy/log

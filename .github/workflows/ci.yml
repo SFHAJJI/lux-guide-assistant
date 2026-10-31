@@ -1,0 +1,61 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Fetch the guide at the pinned commit and check its hashes
+        run: npm run fetch
+      - name: Build the tables and the dictionary
+        run: npm run build:index
+      - name: Unit tests
+        run: npm test
+      - name: Evaluation without a model (per slice)
+        run: node eval/run.mjs
+      - name: Assemble the site
+        run: npm run build:site
+      - name: Journey in a real browser (open a fiche, ask, see the highlight)
+        run: |
+          npx --yes playwright@1.47.2 install --with-deps chromium
+          node build/journey.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evidence
+          path: |
+            eval/report.md
+            eval/report.json
+            build/journey/*.png
+            build/journey/journey.json
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy-pages:
+    if: github.ref == 'refs/heads/main'
+    needs: test-build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
