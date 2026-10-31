@@ -28,7 +28,8 @@ console.log(`upstream ${up.repo} @ ${git(["rev-parse", "HEAD"], dir)}`);
 
 let changed = false;
 for (const rel of Object.keys(up.files)) {
-  const sha = createHash("sha256").update(readFileSync(join(dir, rel))).digest("hex");
+  // Hashed with LF line endings whatever the checkout did, so Windows and Linux agree on the same bytes.
+  const sha = createHash("sha256").update(readFileSync(join(dir, rel), "utf8").replace(/\r\n/g, "\n")).digest("hex");
   if (up.files[rel] === null) { up.files[rel] = sha; changed = true; console.log(`pinned ${rel} ${sha.slice(0, 12)}`); }
   else if (up.files[rel] !== sha) throw new Error(`${rel} differs from the manifest: upstream changed at the pinned commit?`);
   else console.log(`ok     ${rel} ${sha.slice(0, 12)}`);

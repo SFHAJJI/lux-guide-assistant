@@ -4,9 +4,9 @@
     "commit": "8de7372818adf9cbdffded53530791ffbffec930",
     "note": "The guide belongs to its author. Nothing of it is stored in this repository: the build fetches these files at this commit and checks their hashes.",
     "files": {
-      "app/kb.js": "91c40c4d20f7004b542c5fc5a32cf04df949fa9eb47e5b1027fd845d16049e38",
-      "app/fiches/vehicule.js": "956980abbd4b36a572ac07d540c3f7b1f9ae6e15ac021bd7de457b0bd82034d9",
-      "app/guide.js": "23266938346c31b5d7b116960a9b6a0c37232884adc7199a8b85d3227270809a"
+      "app/kb.js": "427728d8d8d9c527e35ccfa6623d785ac279986c8106f57203cd5d51cda1b935",
+      "app/fiches/vehicule.js": "ea72a7938a06eb0a9d0befc1d1f87e4f943547e2575083c3c0fdb3a6c06bddb2",
+      "app/guide.js": "e2e95699a67d5822f6679f6fb61404df0a27d467fc97d905333d7a4195d724b7"
     }
   }
 }
