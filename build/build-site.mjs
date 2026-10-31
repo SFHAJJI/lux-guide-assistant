@@ -23,9 +23,9 @@ const patches = [
     to: "  function envoyer(texteForce) {\n    if (window.ASSISTANT && window.ASSISTANT.envoyer) { return window.ASSISTANT.envoyer(texteForce); }\n    var q = texteForce;"
   },
   {
-    why: "the greeting is the assistant's, without the profile questionnaire",
+    why: "the greeting is the assistant's, without the profile questionnaire (the module greets itself once loaded)",
     from: "  function demarrerChat() {\n    bulle(\"Bonjour. Quelques questions",
-    to: "  function demarrerChat() {\n    if (window.ASSISTANT && window.ASSISTANT.demarrer) { return window.ASSISTANT.demarrer(); }\n    bulle(\"Bonjour. Quelques questions"
+    to: "  function demarrerChat() {\n    if (window.ASSISTANT && window.ASSISTANT.demarrer) { return window.ASSISTANT.demarrer(); }\n    return; // the assistant module greets when it loads\n    bulle(\"Bonjour. Quelques questions"
   },
   {
     why: "a conversation stored by the previous assistant is not replayed into the new one",
@@ -55,11 +55,9 @@ writeFileSync(join(site, "assistant", "config.js"), `export default ${JSON.strin
 // 4. index.html: the banner, the stylesheet, the module.
 const idxPath = join(site, "index.html");
 let idx = readFileSync(idxPath, "utf8");
-const banner = `<div id="demo-bandeau" role="note">Démonstration : l'assistant de cette copie est un exercice d'ingénierie. Le guide est l'œuvre de son auteur : <a href="https://lux-guide.github.io/" rel="noopener">lux-guide.github.io</a>. Copie retirée sur simple demande.</div>\n`;
-if (!idx.includes('<header class="top" id="entete"')) throw new Error("index.html: header not found");
-idx = idx.replace('<header class="top" id="entete"', banner + '<header class="top" id="entete"');
+const banner = `<div id="demo-bandeau" role="note">Démonstration : l'assistant de cette copie du guide est un exercice d'ingénierie. Le guide est l'œuvre de son auteur : <a href="https://lux-guide.github.io/" rel="noopener">lux-guide.github.io</a>. Copie retirée sur simple demande.</div>\n`;
 idx = idx.replace("</head>", '<link rel="stylesheet" href="assistant/assistant.css">\n</head>');
-idx = idx.replace("</body>", '<script type="module" src="assistant/assistant.js"></script>\n</body>');
+idx = idx.replace("</body>", banner + '<script type="module" src="assistant/assistant.js"></script>\n</body>');
 writeFileSync(idxPath, idx);
 writeFileSync(join(site, ".nojekyll"), "");
 console.log(`site/ assembled (proxy: ${proxy || "none, local mode only"})`);

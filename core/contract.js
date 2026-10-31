@@ -67,10 +67,15 @@ export function extractiveAnswer(pq, R, T) {
     for (const s of chosen) spans.push({ bloc_start: b.bloc_id, bloc_end: b.bloc_id, quote: s });
     if (spans.length >= 3) break;
   }
-  const text = spans.map((s) => s.quote).join(" ");
-  const retenir = (T.blocsByFiche.get(R.primary.fiche_id) || []).filter((b) => b.kind === "retenir").find((b) => [...stemsWanted].some((st) => b._stems.has(st)));
+  let text = spans.map((s) => s.quote).join(" ");
+  // The guide's own key point, when it carries the reader's words, is the crispest answer: it becomes the text, and the
+  // paragraph stays the quoted passage. For a list or a procedure, the passage itself is the answer.
+  const retenir = (T.blocsByFiche.get(R.primary.fiche_id) || []).filter((b) => b.kind === "retenir").find((b) => [...stemsWanted].filter((st) => b._stems.has(st)).length >= Math.min(2, stemsWanted.size));
+  if (retenir && !blocs.some((b) => b.bloc_id === retenir.bloc_id)) {
+    if (!whole) text = retenir.text;
+    spans.push({ bloc_start: retenir.bloc_id, bloc_end: retenir.bloc_id, quote: retenir.text });
+  }
   const items = [{ text, spans }];
-  if (retenir && !blocs.some((b) => b.bloc_id === retenir.bloc_id)) items.push({ text: retenir.text, spans: [{ bloc_start: retenir.bloc_id, bloc_end: retenir.bloc_id, quote: retenir.text }] });
   return { answer_found: true, complete_answer_found: !pq.listing, language: "fr", items, caveats: pq.listing ? ["Réponse extraite sans modèle : la liste peut être incomplète, ouvrez la fiche."] : [], conflicting_evidence: false, suggested_clarification: null, keywords_found: pq.direct.filter((k) => blocs.some((b) => b._stems.has(k.stem))).map((k) => k.text), discovered_keywords: [], extraction_method: "verbatim", confidence: R.confidence, source: "code" };
 }
 

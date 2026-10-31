@@ -109,5 +109,8 @@ function demarrer() {
 window.addEventListener("hashchange", () => { if (!location.hash.startsWith("#fiche/")) clearMarks(); });
 
 window.ASSISTANT = { envoyer, demarrer, version: config.commit, client, get lastReply() { return lastReply; } };
+// The site greeted (or not) before this module loaded: the conversation starts here, with the assistant's greeting.
+logs().forEach((l) => { l.innerHTML = ""; });
+demarrer();
 client.data();   // warm the tables while the reader looks around
 client.health();

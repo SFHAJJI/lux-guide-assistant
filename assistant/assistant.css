@@ -1,6 +1,8 @@
 /* The assistant's cards, in the site's own tokens: no new palette, no new type. */
-#demo-bandeau { font: 500 12.5px/1.4 var(--sans); color: var(--muted); background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: 6px 16px; text-align: center; }
+#demo-bandeau { position: fixed; left: 12px; bottom: 12px; z-index: 4; max-width: min(520px, 60vw); font: 500 11.5px/1.4 var(--sans); color: var(--muted); background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-s, 6px); padding: 6px 10px; box-shadow: var(--ombre-s, none); }
 #demo-bandeau a { color: var(--accent); }
+body.rail-ouvert #demo-bandeau { max-width: min(440px, 40vw); }
+@media (max-width: 700px) { #demo-bandeau { display: none; } }
 
 .msg.carte { max-width: 100%; align-self: stretch; }
 .msg.carte .verdict { display: flex; flex-wrap: wrap; gap: 4px; align-items: baseline; font-size: var(--micro, 11px); letter-spacing: .6px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
